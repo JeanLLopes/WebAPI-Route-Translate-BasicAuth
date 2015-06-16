@@ -17,7 +17,7 @@ namespace NetCoders.WebAPI.Services.Controllers
     //origins: ORIGEM DE SOLICITAÇÃO
     //headers: TIPOS DE CABEÇÃLHO DA SOLICITAÇÃO
     //methods: METODOS DE ENVIO (get, post, put, delete,...)
-    //[EnableCors(origins:"www.uol.com.br,http://www.terra.com.br", headers:"Authorization",methods:"get,post")]
+    //[EnableCors(origins:"www.uol.com.br,http:www.terra.com.br", headers:"Authorization",methods:"get,post")]
 
     //COLOCAR EM TODOS AS CONTROLLERS
     [EnableCors(origins: "*", headers: "*", methods: "*")]
@@ -25,7 +25,7 @@ namespace NetCoders.WebAPI.Services.Controllers
     //PARA ALTERAR O PREFIXO DE ROTA DA NOSSA APLICAÇÃO, VAMOS USAR O REOUTEPREFIX
     //COM ELE PODEMOS ALTERAR NOSSA ROTA DE ACESSO A NOSSA API
     //SEM ALTERAR O ARQUIVO DE CONFIGURAÇÕES DE ROTA "WebApiConfig"
-    [RoutePrefix("Palestra")]
+    [RoutePrefix("Version")]
     //AGORA VAMOS ACESSAR NOSSA API COM A SEGUINTE CHAMADA
     //ex: http:localhost:8080/Palestra
     public class VersionController : ApiController
@@ -34,7 +34,7 @@ namespace NetCoders.WebAPI.Services.Controllers
         //COM O ATRIBUTO ROUTE, PODEMOS ALTERAR A ROTA DE NOSSA SOLICITAÇÃO
         //ONDE ALTERAMOS NOVAMENTE A ROTA, SEM NENHUMA ALTERAÇÃO NO ARQUIVO DE ROTA "WebApiConfig"
         //AGORA NOSSA API TERA A SEGUINTE ROTA DE ACESSO
-        //http://localhost:8080/Palestra/V1
+        //http:localhost:8080/Palestra/V1
         [Route("V1")]
         [HttpGet]
         public HttpResponseMessage VersionV1()
@@ -45,7 +45,7 @@ namespace NetCoders.WebAPI.Services.Controllers
 
 
         //AGORA NOSSA API TERA A SEGUINTE ROTA DE ACESSO
-        //http://localhost:8080/Palestra/V2
+        //http:localhost:8080/Palestra/V2
         [Route("V2")]
         [HttpGet]
         public HttpResponseMessage VersionV2()
